@@ -18,8 +18,8 @@ const PATH = path.resolve(MAC_PATH());
 // joker: amount
 const JOKERS_TO_ADD = {
   hack: 5,
-  spaceJoker: 50,
-  hiker: 50,
+  spaceJoker: 10,
+  hiker: 10,
   dna: 5,
 };
 const totalJokers = Object.values(JOKERS_TO_ADD).reduce((a, b) => a + b, 0);
