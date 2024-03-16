@@ -1,3 +1,5 @@
+export type Joker = keyof typeof JOKERS;
+
 export const JOKERS = {
   hack: {
     base_cost: 6,
