@@ -1,5 +1,36 @@
 export type JokerName = keyof typeof JOKERS;
 export type JokerConfig = (typeof JOKERS)[keyof typeof JOKERS];
+export type JokerHand = {
+  [key in JokerName]?: number;
+};
+
+function knownJoker(joker: JokerName | string) {
+  return Object.keys(JOKERS).includes(joker);
+}
+
+function addJoker(joker: JokerName) {
+  if (!knownJoker(joker)) return new Error(`Not implemented joker: ${joker}`);
+  return JOKERS[joker];
+}
+
+export function generateJokers(jokers: JokerHand) {
+  const jokerArray = Object.entries(jokers).map(([joker, amount]) => {
+    if (knownJoker(joker as JokerName)) {
+      return Array(amount).fill(addJoker(joker as JokerName));
+    }
+  });
+
+  const data = jokerArray
+    .flat()
+    .filter((joker) => joker !== undefined)
+    .map((joker: JokerConfig, index) => {
+      return {
+        ...joker,
+        rank: index + 1,
+      };
+    });
+  return data;
+}
 
 export const JOKERS = {
   hack: {
