@@ -38,12 +38,7 @@ const setGameSettings = (saveFile, options: Options = DEFAULT_OPTIONS) => {
     options.rerollCost ?? DEFAULT_OPTIONS.rerollCost;
 };
 
-const upgradingHand = (saveFile, options?: Options) => {
-  const jokers: JokerHand = {
-    hiker: 2,
-    dna: 2,
-    spaceJoker: 4,
-  };
+const baseHand = (saveFile, jokers: JokerHand, options?: Options) => {
   const optionsWithJokers = {
     ...options,
     jokerLimit: baseJokerLimit(jokers),
@@ -52,12 +47,34 @@ const upgradingHand = (saveFile, options?: Options) => {
   saveFile.cardAreas.jokers.cards = generateJokers(jokers);
 };
 
-type Preset = "upgradingHand" | "default";
+const upgradingHand = (saveFile, options?: Options) => {
+  const jokers: JokerHand = {
+    hiker: 2,
+    dna: 2,
+    spaceJoker: 4,
+  };
+  baseHand(saveFile, jokers, options);
+};
 
-const usePreset = (saveFile, preset?: string) => {
+const repeaterHand = (saveFile, options?: Options) => {
+  const jokers: JokerHand = {
+    hack: 5,
+    fibonacci: 5,
+    hiker: 5,
+    spaceJoker: 5,
+  };
+  baseHand(saveFile, jokers, options);
+};
+
+type Preset = "upgradingHand" | "repeaterHand" | "default";
+
+const usePreset = (saveFile, preset?: Preset) => {
   switch (preset) {
     case "upgradingHand":
       upgradingHand(saveFile);
+      break;
+    case "repeaterHand":
+      repeaterHand(saveFile);
       break;
     default:
       setGameSettings(saveFile);
