@@ -7,7 +7,9 @@
   "type": "module",
   "scripts": {
     "build": "rollup --config",
-    "build:hand": "bun ./misc/useCustomHand.ts",
+    "build:hand": "bun ./misc/updateSave.ts",
+    "build:json": "bun ./misc/loadSave.ts",
+    "build:jokers": "bun ./misc/addJokers.ts",
     "static": "npm run build && ./make-static.sh"
   },
   "dependencies": {

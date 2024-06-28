@@ -3,17 +3,21 @@ export type JokerConfig = (typeof JOKERS)[keyof typeof JOKERS];
 export type JokerHand = {
   [key in JokerName]?: number;
 };
+type JokerAbility = {
+  negative?: boolean;
+  eternal?: boolean;
+};
 
 function knownJoker(joker: JokerName | string) {
   return Object.keys(JOKERS).includes(joker);
 }
 
-function addJoker(joker: JokerName) {
+function addJoker(joker: JokerName, options?: JokerAbility) {
   if (!knownJoker(joker)) return new Error(`Not implemented joker: ${joker}`);
   return JOKERS[joker];
 }
 
-export function generateJokers(jokers: JokerHand) {
+export function generateJokers(jokers: JokerHand, options?: JokerAbility) {
   const jokerArray = Object.entries(jokers).map(([joker, amount]) => {
     if (knownJoker(joker as JokerName)) {
       return Array(amount).fill(addJoker(joker as JokerName));
@@ -33,6 +37,120 @@ export function generateJokers(jokers: JokerHand) {
 }
 
 export const JOKERS = {
+  baron: {
+    base_cost: 8,
+    extra_cost: 0,
+    facing: "front",
+    ability: {
+      h_x_mult: 0,
+      t_chips: 0,
+      x_mult: 1,
+      h_dollars: 0,
+      p_dollars: 0,
+      hands_played_at_create: 4,
+      h_mult: 0,
+      set: "Joker",
+      extra: 1.5,
+      order: 72,
+      d_size: 0,
+      t_mult: 0,
+      h_size: 0,
+      name: "Baron",
+      perma_bonus: 0,
+      bonus: 0,
+      type: "",
+      extra_value: 2,
+      eternal: true,
+      mult: 0,
+    },
+    save_fields: {
+      center: "j_baron",
+    },
+    bypass_discovery_center: true,
+    bypass_discovery_ui: true,
+    cost: 8,
+    sell_cost: 6,
+    base: {
+      face_nominal: 0,
+      times_played: 0,
+      nominal: 0,
+      suit_nominal: 0,
+    },
+    added_to_deck: true,
+    params: {
+      bypass_discovery_ui: true,
+      bypass_back: {
+        y: 2,
+        x: 6,
+      },
+      discover: false,
+      bypass_discovery_center: true,
+    },
+    bypass_lock: true,
+    sprite_facing: "front",
+    rank: 97,
+    sort_id: 2086,
+    debuff: false,
+    label: "Baron",
+  },
+  wee: {
+    base_cost: 8,
+    extra_cost: 0,
+    params: {
+      discover: true,
+      bypass_discovery_center: true,
+      bypass_back: {
+        y: 3,
+        x: 3,
+      },
+    },
+    rank: 205,
+    bypass_discovery_ui: true,
+    facing: "front",
+    save_fields: {
+      center: "j_wee",
+    },
+    ability: {
+      order: 124,
+      type: "",
+      t_mult: 0,
+      h_mult: 0,
+      h_size: 0,
+      d_size: 0,
+      t_chips: 0,
+      bonus: 0,
+      perma_bonus: 0,
+      h_x_mult: 0,
+      h_dollars: 0,
+      extra: {
+        chips: 10,
+        chip_mod: 8,
+      },
+      p_dollars: 0,
+      set: "Joker",
+      hands_played_at_create: 14,
+      x_mult: 1,
+      mult: 0,
+      effect: "",
+      name: "Wee Joker",
+      extra_value: 0,
+    },
+    debuff: false,
+    label: "Wee Joker",
+    bypass_discovery_center: true,
+    cost: 6,
+    sell_cost: 3,
+    sprite_facing: "front",
+    sort_id: 1575,
+    added_to_deck: true,
+    bypass_lock: true,
+    base: {
+      nominal: 0,
+      suit_nominal: 0,
+      face_nominal: 0,
+      times_played: 0,
+    },
+  },
   hack: {
     base_cost: 6,
     extra_cost: 0,
@@ -137,11 +255,6 @@ export const JOKERS = {
       },
       discover: false,
       bypass_discovery_center: true,
-    },
-    edition: {
-      holo: true,
-      type: "holo",
-      mult: 10,
     },
     bypass_lock: true,
     sprite_facing: "front",
