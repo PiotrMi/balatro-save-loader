@@ -1,5 +1,116 @@
 [
   {
+    "debuff": false,
+    "sell_cost": 5,
+    "extra_cost": 0,
+    "base_cost": 6,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 7,
+    "save_fields": {
+      "center": "j_burnt"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 6
+      },
+      "bypass_discovery_ui": true,
+      "discover": false,
+      "bypass_discovery_center": true
+    },
+    "label": "Burnt Joker",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 2061,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 2,
+      "h_dollars": 0,
+      "order": 144,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "mult": 0,
+      "name": "Burnt Joker",
+      "extra": 4,
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 4,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 6
+  },
+  {
+    "base_cost": 5,
+    "cost": 5,
+    "extra_cost": 0,
+    "facing": "front",
+    "save_fields": {
+      "center": "j_ring_master"
+    },
+    "label": "Showman",
+    "params": {
+      "bypass_back": {
+        "x": 6,
+        "y": 2
+      },
+      "discover": false,
+      "bypass_discovery_center": true,
+      "bypass_discovery_ui": true
+    },
+    "rank": 1,
+    "base": {
+      "suit_nominal": 0,
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0
+    },
+    "bypass_lock": true,
+    "added_to_deck": true,
+    "bypass_discovery_center": true,
+    "bypass_discovery_ui": true,
+    "sort_id": 1327,
+    "ability": {
+      "t_mult": 0,
+      "hands_played_at_create": 2,
+      "mult": 0,
+      "d_size": 0,
+      "h_size": 0,
+      "t_chips": 0,
+      "name": "Showman",
+      "h_x_mult": 0,
+      "h_dollars": 0,
+      "extra_value": 4,
+      "type": "",
+      "effect": "",
+      "perma_bonus": 0,
+      "p_dollars": 0,
+      "set": "Joker",
+      "x_mult": 1,
+      "h_mult": 0,
+      "order": 121,
+      "bonus": 0
+    },
+    "debuff": false,
+    "sprite_facing": "front",
+    "sell_cost": 6
+  },
+  {
     "bypass_lock": true,
     "bypass_discovery_center": true,
     "bypass_discovery_ui": true,
@@ -177,282 +288,227 @@
     "debuff": false
   },
   {
-    "bypass_lock": true,
-    "bypass_discovery_center": true,
-    "bypass_discovery_ui": true,
-    "cost": 5,
-    "ability": {
-      "set": "Joker",
-      "perma_bonus": 0,
-      "x_mult": 1,
-      "mult": 0,
-      "d_size": 0,
-      "t_chips": 0,
-      "h_mult": 0,
-      "h_size": 0,
-      "h_x_mult": 0,
-      "h_dollars": 0,
-      "extra_value": 4,
-      "type": "",
-      "hands_played_at_create": 2,
-      "t_mult": 0,
-      "name": "Showman",
-      "effect": "",
-      "p_dollars": 0,
-      "bonus": 0,
-      "order": 121
-    },
-    "rank": 4,
-    "sell_cost": 6,
-    "sprite_facing": "front",
-    "save_fields": {
-      "center": "j_ring_master"
-    },
-    "facing": "front",
-    "base_cost": 5,
-    "extra_cost": 0,
-    "sort_id": 1327,
-    "params": {
-      "bypass_discovery_ui": true,
-      "bypass_discovery_center": true,
-      "bypass_back": {
-        "y": 2,
-        "x": 6
-      },
-      "discover": false
-    },
-    "added_to_deck": true,
-    "base": {
-      "nominal": 0,
-      "times_played": 0,
-      "face_nominal": 0,
-      "suit_nominal": 0
-    },
-    "label": "Showman",
-    "debuff": false
-  },
-  {
-    "bypass_lock": true,
-    "bypass_discovery_center": true,
-    "bypass_discovery_ui": true,
-    "cost": 8,
-    "ability": {
-      "set": "Joker",
-      "perma_bonus": 0,
-      "x_mult": 1,
-      "mult": 0,
-      "d_size": 0,
-      "t_chips": 0,
-      "h_mult": 0,
-      "h_size": 0,
-      "h_x_mult": 0,
-      "h_dollars": 0,
-      "extra_value": 5,
-      "type": "",
-      "hands_played_at_create": 1,
-      "t_mult": 0,
-      "name": "DNA",
-      "bonus": 0,
-      "p_dollars": 0,
-      "order": 51
-    },
-    "rank": 6,
+    "debuff": false,
     "sell_cost": 9,
+    "extra_cost": 0,
+    "base_cost": 8,
+    "bypass_discovery_ui": true,
     "sprite_facing": "front",
+    "facing": "front",
+    "rank": 3,
     "save_fields": {
       "center": "j_dna"
     },
-    "facing": "front",
-    "base_cost": 8,
-    "extra_cost": 0,
-    "sort_id": 225,
     "params": {
-      "bypass_discovery_ui": true,
-      "bypass_discovery_center": true,
       "bypass_back": {
         "y": 2,
         "x": 6
       },
-      "discover": false
-    },
-    "added_to_deck": true,
-    "base": {
-      "nominal": 0,
-      "times_played": 0,
-      "face_nominal": 0,
-      "suit_nominal": 0
+      "bypass_discovery_ui": true,
+      "discover": false,
+      "bypass_discovery_center": true
     },
     "label": "DNA",
-    "debuff": false
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 225,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 5,
+      "h_dollars": 0,
+      "order": 51,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "name": "DNA",
+      "mult": 0,
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 1,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 8
   },
   {
-    "bypass_lock": true,
-    "bypass_discovery_center": true,
-    "bypass_discovery_ui": true,
-    "cost": 6,
-    "ability": {
-      "set": "Joker",
-      "perma_bonus": 0,
-      "x_mult": 1,
-      "mult": 0,
-      "d_size": 0,
-      "t_chips": 0,
-      "h_mult": 0,
-      "h_size": 0,
-      "h_x_mult": 0,
-      "h_dollars": 0,
-      "extra_value": 3,
-      "type": "",
-      "extra": 1,
-      "hands_played_at_create": 0,
-      "t_mult": 0,
-      "name": "Hack",
-      "effect": "Low Card double",
-      "p_dollars": 0,
-      "bonus": 0,
-      "order": 36
-    },
-    "rank": 8,
+    "debuff": false,
     "sell_cost": 6,
+    "extra_cost": 0,
+    "base_cost": 6,
+    "bypass_discovery_ui": true,
     "sprite_facing": "front",
+    "facing": "front",
+    "rank": 12,
     "save_fields": {
       "center": "j_hack"
     },
-    "facing": "front",
-    "base_cost": 6,
-    "extra_cost": 0,
-    "sort_id": 1498,
     "params": {
-      "bypass_discovery_ui": true,
-      "bypass_discovery_center": true,
       "bypass_back": {
         "y": 2,
         "x": 6
       },
-      "discover": false
-    },
-    "added_to_deck": true,
-    "base": {
-      "nominal": 0,
-      "times_played": 0,
-      "face_nominal": 0,
-      "suit_nominal": 0
+      "bypass_discovery_ui": true,
+      "discover": false,
+      "bypass_discovery_center": true
     },
     "label": "Hack",
-    "debuff": false
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 1498,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 3,
+      "mult": 0,
+      "order": 36,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "Low Card double",
+      "extra": 1,
+      "h_dollars": 0,
+      "name": "Hack",
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 0,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 6
   },
   {
+    "base_cost": 5,
+    "cost": 5,
+    "extra_cost": 0,
+    "facing": "front",
+    "save_fields": {
+      "center": "j_hiker"
+    },
+    "label": "Hiker",
+    "params": {
+      "bypass_back": {
+        "x": 6,
+        "y": 2
+      },
+      "discover": false,
+      "bypass_discovery_center": true,
+      "bypass_discovery_ui": true
+    },
+    "rank": 5,
+    "base": {
+      "suit_nominal": 0,
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0
+    },
     "bypass_lock": true,
+    "added_to_deck": true,
     "bypass_discovery_center": true,
     "bypass_discovery_ui": true,
-    "cost": 5,
+    "sort_id": 1410,
     "ability": {
-      "set": "Joker",
-      "perma_bonus": 0,
-      "x_mult": 1,
+      "extra": 4,
+      "t_mult": 0,
+      "hands_played_at_create": 0,
       "mult": 0,
       "d_size": 0,
-      "t_chips": 0,
-      "h_mult": 0,
       "h_size": 0,
+      "t_chips": 0,
+      "name": "Hiker",
       "h_x_mult": 0,
       "h_dollars": 0,
       "extra_value": 4,
       "type": "",
-      "extra": 4,
-      "hands_played_at_create": 0,
-      "t_mult": 0,
-      "name": "Hiker",
-      "p_dollars": 0,
-      "bonus": 0,
-      "order": 56
-    },
-    "rank": 10,
-    "sell_cost": 6,
-    "sprite_facing": "front",
-    "save_fields": {
-      "center": "j_hiker"
-    },
-    "facing": "front",
-    "base_cost": 5,
-    "extra_cost": 0,
-    "sort_id": 1410,
-    "params": {
-      "bypass_discovery_ui": true,
-      "bypass_discovery_center": true,
-      "bypass_back": {
-        "y": 2,
-        "x": 6
-      },
-      "discover": false
-    },
-    "added_to_deck": true,
-    "base": {
-      "nominal": 0,
-      "times_played": 0,
-      "face_nominal": 0,
-      "suit_nominal": 0
-    },
-    "label": "Hiker",
-    "debuff": false
-  },
-  {
-    "bypass_lock": true,
-    "bypass_discovery_center": true,
-    "bypass_discovery_ui": true,
-    "cost": 6,
-    "ability": {
       "set": "Joker",
       "perma_bonus": 0,
       "x_mult": 1,
-      "mult": 0,
-      "d_size": 0,
-      "t_chips": 0,
-      "h_mult": 0,
-      "h_size": 0,
-      "h_x_mult": 0,
-      "h_dollars": 0,
-      "extra_value": 0,
-      "type": "",
-      "extra": {
-        "chip_mod": 8,
-        "chips": 322
-      },
-      "hands_played_at_create": 14,
-      "t_mult": 0,
-      "name": "Wee Joker",
-      "effect": "",
       "p_dollars": 0,
-      "bonus": 0,
-      "order": 124
+      "h_mult": 0,
+      "order": 56,
+      "bonus": 0
     },
-    "rank": 11,
-    "sell_cost": 3,
+    "debuff": false,
     "sprite_facing": "front",
+    "sell_cost": 6
+  },
+  {
+    "debuff": false,
+    "sell_cost": 3,
+    "extra_cost": 0,
+    "base_cost": 8,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 9,
     "save_fields": {
       "center": "j_wee"
     },
-    "facing": "front",
-    "base_cost": 8,
-    "extra_cost": 0,
-    "sort_id": 1575,
     "params": {
-      "bypass_discovery_center": true,
       "bypass_back": {
         "y": 3,
         "x": 3
       },
-      "discover": true
-    },
-    "added_to_deck": true,
-    "base": {
-      "nominal": 0,
-      "times_played": 0,
-      "face_nominal": 0,
-      "suit_nominal": 0
+      "discover": true,
+      "bypass_discovery_center": true
     },
     "label": "Wee Joker",
-    "debuff": false
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 1575,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "h_dollars": 0,
+      "order": 124,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "extra": {
+        "chip_mod": 8,
+        "chips": 258
+      },
+      "name": "Wee Joker",
+      "mult": 0,
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 14,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 6
   },
   {
     "bypass_lock": true,
@@ -678,5 +734,283 @@
     },
     "label": "Hologram",
     "debuff": false
+  },
+  {
+    "debuff": false,
+    "sell_cost": 10,
+    "extra_cost": 0,
+    "base_cost": 20,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 13,
+    "save_fields": {
+      "center": "j_caino"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 4
+      },
+      "discover": true,
+      "bypass_discovery_center": true
+    },
+    "label": "Caino",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 244,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "mult": 0,
+      "order": 146,
+      "perma_bonus": 0,
+      "caino_xmult": 1,
+      "set": "Joker",
+      "effect": "",
+      "extra": 1,
+      "type": "",
+      "h_dollars": 0,
+      "name": "Caino",
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 1,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 20
+  },
+  {
+    "debuff": false,
+    "sell_cost": 10,
+    "extra_cost": 0,
+    "base_cost": 20,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 14,
+    "save_fields": {
+      "center": "j_triboulet"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 4
+      },
+      "discover": true,
+      "bypass_discovery_center": true
+    },
+    "label": "Triboulet",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 254,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "mult": 0,
+      "order": 147,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "extra": 2,
+      "h_dollars": 0,
+      "name": "Triboulet",
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 2,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 20
+  },
+  {
+    "debuff": false,
+    "sell_cost": 10,
+    "extra_cost": 0,
+    "base_cost": 20,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 1,
+    "save_fields": {
+      "center": "j_perkeo"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 4
+      },
+      "discover": true,
+      "bypass_discovery_center": true
+    },
+    "label": "Perkeo",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 263,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "h_dollars": 0,
+      "order": 150,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "name": "Perkeo",
+      "mult": 0,
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 3,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 20
+  },
+  {
+    "debuff": false,
+    "sell_cost": 10,
+    "extra_cost": 0,
+    "base_cost": 20,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 15,
+    "save_fields": {
+      "center": "j_chicot"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 4
+      },
+      "discover": true,
+      "bypass_discovery_center": true
+    },
+    "label": "Chicot",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 274,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "mult": 0,
+      "order": 149,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "h_dollars": 0,
+      "name": "Chicot",
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 4,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 20
+  },
+  {
+    "debuff": false,
+    "sell_cost": 10,
+    "extra_cost": 0,
+    "base_cost": 20,
+    "bypass_discovery_ui": true,
+    "sprite_facing": "front",
+    "facing": "front",
+    "rank": 6,
+    "save_fields": {
+      "center": "j_yorick"
+    },
+    "params": {
+      "bypass_back": {
+        "y": 2,
+        "x": 4
+      },
+      "discover": true,
+      "bypass_discovery_center": true
+    },
+    "label": "Yorick",
+    "bypass_discovery_center": true,
+    "base": {
+      "face_nominal": 0,
+      "nominal": 0,
+      "times_played": 0,
+      "suit_nominal": 0
+    },
+    "sort_id": 302,
+    "ability": {
+      "t_chips": 0,
+      "x_mult": 1,
+      "extra_value": 0,
+      "mult": 0,
+      "order": 148,
+      "perma_bonus": 0,
+      "type": "",
+      "set": "Joker",
+      "effect": "",
+      "yorick_discards": 1,
+      "extra": {
+        "discards": 1,
+        "xmult": 1
+      },
+      "name": "Yorick",
+      "h_dollars": 0,
+      "h_mult": 0,
+      "bonus": 0,
+      "h_x_mult": 0,
+      "t_mult": 0,
+      "hands_played_at_create": 6,
+      "p_dollars": 0,
+      "d_size": 0,
+      "h_size": 0
+    },
+    "added_to_deck": true,
+    "bypass_lock": true,
+    "cost": 20
   }
 ]

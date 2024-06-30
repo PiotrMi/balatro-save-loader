@@ -4,8 +4,11 @@ import os from "os";
 import path from "path";
 // @ts-ignore: Could not find a declaration file for module
 import { processFile, processJSON } from "../src/helpers/loading";
-import { JokerHand } from "./jokers";
+import { jokerHandCount } from "./types";
 import jokersFile from "./jokers.json";
+import { generateTypes } from "./utils/generateTypes";
+import { usePreset } from "./presets";
+import { Config } from "./types";
 
 export type TJokersFile = typeof jokersFile;
 
@@ -75,14 +78,24 @@ const addJokersToJson = async (jsonSave: TJokersFile) => {
       jokerNames
     );
 
+    await generateTypes();
+
     await writeFile(jokerJson, JSON.stringify(newJokers, null, 2));
   } catch (error) {
     console.error(error);
   }
 };
 
-const baseJokerLimit = (jokersAdded: JokerHand, moreFreeSlots: number = 5) =>
-  Object.values(jokersAdded).reduce((a, b) => a + b, 0) + moreFreeSlots;
+const baseJokerLimit = (
+  jokersAdded: jokerHandCount,
+  moreFreeSlots: number = 5
+) => Object.values(jokersAdded).reduce((a, b) => a + b, 0) + moreFreeSlots;
+
+function updateSave({ preset, userSlot, options }: Config) {
+  const saveFile = readSaveFile(userSlot);
+  usePreset(saveFile, preset, options);
+  writeSaveFile(saveFile, userSlot);
+}
 
 export {
   readSaveFile,
@@ -90,4 +103,6 @@ export {
   baseJokerLimit,
   saveFileToJson,
   addJokersToJson,
+  jokersFromSave,
+  updateSave,
 };

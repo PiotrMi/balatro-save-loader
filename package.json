@@ -6,17 +6,16 @@
   "license": "MPL-2.0",
   "type": "module",
   "scripts": {
-    "build": "rollup --config",
-    "build:hand": "bun ./misc/updateSave.ts",
-    "build:json": "bun ./misc/loadSave.ts",
-    "build:jokers": "bun ./misc/addJokers.ts",
-    "static": "npm run build && ./make-static.sh"
+    "build:hand": "bun ./misc/index.ts --buildHand",
+    "build:json": "bun ./misc/index.ts --downloadSave",
+    "build:jokers": "bun ./misc/index.ts --updateJokers"
   },
   "dependencies": {
     "pako": "^2.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/bun": "^1.1.6",
     "rollup": "^4.9.6"
   }
 }

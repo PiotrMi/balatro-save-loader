@@ -1,4 +1,5 @@
-import { JokerHand, generateJokers } from "./jokers";
+import { generateJokers } from "./jokers";
+import { jokerHandCount } from "./types";
 import { baseJokerLimit } from "./utils";
 
 export type Options = {
@@ -38,13 +39,26 @@ const setGameSettings = (saveFile: any, options: Options = DEFAULT_OPTIONS) => {
     options.rerollCost ?? DEFAULT_OPTIONS.rerollCost;
 };
 
-const baseHand = (saveFile: any, jokers: JokerHand, options?: Options) => {
+const baseHand = (saveFile: any, jokers: jokerHandCount, options?: Options) => {
   const optionsWithJokers = {
     ...options,
     jokerLimit: baseJokerLimit(jokers),
   };
   setGameSettings(saveFile, optionsWithJokers);
   saveFile.cardAreas.jokers.cards = generateJokers(jokers);
+};
+
+const legendaryHand = (saveFile: any, options?: Options) => {
+  baseHand(
+    saveFile,
+    {
+      perkeo: 1,
+      dna: 2,
+      hiker: 2,
+      yorick: 1,
+    },
+    options
+  );
 };
 
 const goodStart = (saveFile: any, options?: Options) => {
@@ -55,34 +69,31 @@ const goodStart = (saveFile: any, options?: Options) => {
       dna: 2,
       hack: 2,
       hiker: 2,
-      wee: 1,
+      "wee joker": 2,
     },
     options
   );
 };
 
 const upgradingHand = (saveFile: any, options?: Options) => {
-  const jokers: JokerHand = {
-    spaceJoker: 4,
+  const jokers: jokerHandCount = {
     hiker: 4,
   };
   baseHand(saveFile, jokers, options);
 };
 
 const repeaterHand = (saveFile: any, options?: Options) => {
-  const jokers: JokerHand = {
+  const jokers: jokerHandCount = {
     hack: 5,
     fibonacci: 5,
     hiker: 5,
-    spaceJoker: 5,
+    dna: 4,
   };
   baseHand(saveFile, jokers, options);
 };
 
 const spaceJokerOnly = (saveFile: any, options?: Options) => {
-  const jokers: JokerHand = {
-    spaceJoker: 100,
-  };
+  const jokers: jokerHandCount = {};
   baseHand(saveFile, jokers, options);
 };
 
@@ -91,6 +102,7 @@ export type Preset =
   | "repeaterHand"
   | "spaceJokerOnly"
   | "goodStart"
+  | "legendaryHand"
   | "default";
 
 const usePreset = (
@@ -111,6 +123,9 @@ const usePreset = (
       break;
     case "goodStart":
       goodStart(saveFile, options);
+      break;
+    case "legendaryHand":
+      legendaryHand(saveFile, options);
       break;
     default:
       setGameSettings(saveFile, options);
